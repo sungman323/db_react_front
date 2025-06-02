@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.Login{
+  text-align: center;
+}
+.Login label{
+  display: none;
+}
+.Login input, .Login button{
+  display: block;
+  width: 600px; height: 35px;
+  margin:0 auto;
+}
+
+.Login input{
+  text-indent: 20px;
+}
+
+.sns_login{
+  list-style: none;
+  padding:0;
+  display: flex;
+  justify-content: center;
+}
+.sns_login li{
+  margin-left: 20px;
+}
+.sns_login button{
+  width: auto; height: auto;
+  margin:0; padding:0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sns_login li img{
+  width: 40px;
+}

@@ -11,7 +11,7 @@ function Update(props) {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    axios.get(`http://localhost:9070/goods/${g_code}`)
+    axios.get(`https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/goods/${g_code}`)
     .then(res=>{
       // console.log('서버 응답값 : ', res.data);
       setForm(res.data);
@@ -29,7 +29,7 @@ function Update(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.put(`http://localhost:9070/goods/update/${g_code}`,{
+    axios.put(`https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/goods/update/${g_code}`,{
       g_name:form.g_name, g_cost:form.g_cost
     })
     .then(()=>{

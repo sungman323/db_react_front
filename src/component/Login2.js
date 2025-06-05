@@ -42,7 +42,7 @@ function Login2(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const res = await axios.post('http://localhost:9070/login2', form);
+      const res = await axios.post('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/login2', form);
       localStorage.setItem('token', res.data.token);
       alert('로그인 성공');
       navigate('/');

@@ -19,7 +19,7 @@ function Register2(props) {
       return;
     }
     try{
-      await axios.post('http://localhost:9070/register2', {
+      await axios.post('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/register2', {
         username:form.username, password:form.password, tel:form.tel, email:form.email
       });
       alert('회원가입 성공');

@@ -19,7 +19,7 @@ function LoginRegister(props) {
       return;
     }
     try{
-      await axios.post('http://localhost:9070/loginregister', {
+      await axios.post('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/loginregister', {
         username:form.username, password:form.password
       });
       alert('회원가입 성공');

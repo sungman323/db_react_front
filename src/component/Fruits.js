@@ -40,7 +40,7 @@ function Fruits(props) {
     //컴포넌트가 처음 렌더링될 때 useEffect에 의해 실행되어 데이터를 불러오고, 불러온 데이터를 state에 저장함. 이후 데이터가 로드되면 화면에 출력함.
     const loadData = () => {
       axios
-        .get('http://localhost:9070/fruits')
+        .get('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/fruits')
         .then(res => {
           setData(res.data);
           setFruitsCount(res.data.length);

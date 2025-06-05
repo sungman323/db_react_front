@@ -28,7 +28,7 @@ function Goods(props) {
 
   const loadData=()=>{
     // 비동기 방식을 이용해 데이터를 불러온다.
-    axios.get('http://localhost:9070/goods/')
+    axios.get('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/goods/')
     .then(res=>{
       setData(res.data);
       setGoodsCount(res.data.length);
@@ -42,7 +42,7 @@ function Goods(props) {
 
   const delData = (g_code) => {
     if(window.confirm('정말 삭제하시겠습니까?')){
-      axios.delete(`http://localhost:9070/goods/${g_code}`)
+      axios.delete(`https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/goods/${g_code}`)
       .then(() => {
         alert('삭제되었습니다.');
         loadData();

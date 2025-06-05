@@ -40,7 +40,7 @@ function Books(props) {
     //React비동기 통신
     axios
     //DB에서 json데이터를 불러온다.
-    .get('http://localhost:9070/books')
+    .get('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/books')
     //성공시 데이터를 변수에 저장
     .then(res=>{
       setData(res.data);
@@ -57,7 +57,7 @@ function Books(props) {
   //2. 상품삭제 하기
   const deleteData = (num)=>{
     if(window.confirm('정말 삭제하시겠습니까?')){axios //서버에 del요청 전송하기
-      .delete(`http://localhost:9070/books/${num}`)
+      .delete(`https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/books/${num}`)
       //성공일때 아래 내용 실행
         .then(() => {
           alert('삭제되었습니다.');

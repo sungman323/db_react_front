@@ -15,7 +15,7 @@ function LogIn(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{  // 성공 시 실행 내용
-      const res = await axios.post('http://localhost:9070/login', formData);
+      const res = await axios.post('https://port-0-db-react-back-mbeer0yi973d87dd.sel4.cloudtype.app/login', formData);
       // 사용자 인증이 끝나면 토큰 발급
       localStorage.setItem('token', res.data.token);
       alert('로그인 성공');

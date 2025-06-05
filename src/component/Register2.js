@@ -47,11 +47,11 @@ function Register2(props) {
         </p>
         <p>
           <label htmlFor="tel">전화번호 : </label>
-          <input type="tel" name='tel' id='tel' pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder='전화번호를 입력하세요.' value={form.tel} onChange={handleChange} required />
+          <input type="tel" name='tel' id='tel' pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder='010-0000-0000' value={form.tel} onChange={handleChange} required />
         </p>
         <p>
           <label htmlFor="email">이메일 : </label>
-          <input type="email" name='email' id='email' placeholder='이메일을 입력하세요.' value={form.email} onChange={handleChange} required />
+          <input type="email" name='email' id='email' placeholder='email@domain.com' value={form.email} onChange={handleChange} required />
         </p>
         <button type='submit'>회원가입</button>
         {error&&<p style={{color:'red'}}>{error}</p>}
